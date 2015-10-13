@@ -1,0 +1,31 @@
+[
+  {
+    "method": "GET",
+    "from": "/docs",
+    "to": "_view/docById",
+    "query": {
+      "group": "true",
+      "group_level": "2",
+      "include_docs": "true"
+    }
+  },
+  {
+    "method": "POST",
+    "from": "/docs",
+    "to": "_updates/update_create_document" 
+  },
+  {
+    "method": "PUT",
+    "from": "/docs",
+    "to": "_updates/update_create_document" 
+  },
+  {
+     "from": "/*",
+     "to": "../../*"
+  },
+  {
+     "from": "/",
+     "to": "../../index.html"
+  }
+
+]
