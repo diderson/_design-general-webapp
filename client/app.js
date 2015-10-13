@@ -15,7 +15,8 @@ module.exports = AmpersandApp.extend({
     // wait for document ready to initialize the widgets
     domReady(function () {
       //init the widgets
-      
+      var GeneralView = require('./views/General');
+      var general     = new GeneralView({el: document.getElementById('area-global')});
     });
   }
 });
