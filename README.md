@@ -1,9 +1,9 @@
 # General CouchDB and Ampersand structure
 
-## /server
+## [/server](server/README.md)
 
 Contains the stuff, which will be needed to create a new server API (design doc).
 
-## /client
+## [/client](client/README.md)
 
 Contains the stuff to create a new web applictaion.
