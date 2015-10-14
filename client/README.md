@@ -1,4 +1,4 @@
-# client
+# General Ampersand structure
 
 ## app.js
 
