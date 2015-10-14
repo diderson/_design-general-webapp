@@ -8,10 +8,14 @@ module.exports = AmpersandView.extend({
   },
   events: {
     "click #click-button": "clickButtonFunction"
-  }
+  },
   bindings: {
     'model.text': {
       type: 'text',
+      selector: '#general-body'
+    },
+    'model.fontColor': {
+      type: 'class',
       selector: '#general-body'
     }
   },
@@ -22,6 +26,7 @@ module.exports = AmpersandView.extend({
   },
   clickButtonFunction: function (e) {
     e.preventDefault();
-    alert('Hello World click');
+    this.model.fontColor = 'greenfont';
+    console.log('Hello World click');
   }
 });

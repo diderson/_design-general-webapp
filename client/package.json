@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "ampersand-app": "^1.0.4",
+    "ampersand-model": "^6.0.2",
+    "ampersand-router": "^3.0.2",
+    "ampersand-view": "^8.0.1",
+    "domready": "^1.0.8"
+  }
+}
