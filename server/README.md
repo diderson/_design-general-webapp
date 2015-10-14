@@ -1,5 +1,4 @@
-# _design-general-webapp
-This repository defines a general ddoc and ampersand as couchapp design
+# General CouchDB design doc structure
 
 
 ## [Views](http://docs.couchdb.org/en/latest/couchapp/ddocs.html?highlight=reduce#view-functions) 
