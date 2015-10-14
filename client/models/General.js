@@ -1,11 +1,14 @@
 var AmpersandModel = require('ampersand-model');
+var app = require('ampersand-app');
 
 module.exports = AmpersandModel.extend({
+  url: app.config.rooturl + '/helloworldtext',
   modelType: 'General',
   props: {
     text: {
       type: 'string',
-      required: true
+      required: true,
+      default: 'loading!'
     },
     name: {
       type: 'string',
@@ -16,6 +19,9 @@ module.exports = AmpersandModel.extend({
       required: false
     }
   },
+  session: {
+    fontColor: 'string'
+  },
   derived: {
     firstNameAndName: {
       deps: ['name', 'firstName'],
@@ -23,6 +29,5 @@ module.exports = AmpersandModel.extend({
         return this.firstName + ' ' + this.name; 
       }
     }
-
   }
 });
