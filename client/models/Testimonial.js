@@ -9,6 +9,10 @@ module.exports = AmpersandModel.extend({
       type: 'string',
       required: false
     },
+    _rev: {
+      type: 'string',
+      required: false
+    },
     text: {
       type: 'string',
       required: true

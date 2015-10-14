@@ -18,9 +18,12 @@ module.exports = AmpersandView.extend({
   },
   handleFormSubmit: function (e) {
     e.preventDefault();
-    this.model.save({
-      success: function () {
-          console.log('saved!');
+    var self = this;
+    this.model.save(this.model, {
+      success: function (model, response) {
+        model._id = response.id;
+        model._rev = response.rev;
+        console.log('saved!');
       },
       error: function () {
           console('failed to save');
