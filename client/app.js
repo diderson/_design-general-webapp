@@ -38,6 +38,11 @@ module.exports = AmpersandApp.extend({
       general.render({
         model: model
       })
+
+      var FormView = require('./views/Testimonial');
+      var form = new FormView({
+        el: document.getElementById('testimonial-form')
+      })
     });
   }
 });
