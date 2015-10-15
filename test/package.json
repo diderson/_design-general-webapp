@@ -1,0 +1,6 @@
+{
+  "name": "test",
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}

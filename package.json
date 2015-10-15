@@ -1,0 +1,7 @@
+{
+  "name": "general_webapp",
+  "scripts": {
+    "test": "export NODE_PATH=`pwd`; ./test/node_modules/.bin/mocha --reporter spec --recursive ./test/server/ ./test/client/",
+    "install": "node git_hooks/install.js"
+  }
+}

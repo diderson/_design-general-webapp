@@ -1,3 +1,4 @@
 .couchapprc
 client/node_modules
 client/js/app.bundle.js
+test/node_modules/
