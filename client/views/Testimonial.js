@@ -8,13 +8,25 @@ module.exports = AmpersandView.extend({
   },
   events: {
     "click #submit-testimonial": "handleFormSubmit",
-    'change #testimonial-text': 'handleTextChange'
+    'change #testimonial-text': 'handleTextChange',
+    'click #destroy-testimonial': 'handleFormDestroy'
   },
   bindings: {
     'model.text': {
       type: 'value',
       selector: '#testimonial-text'
     }
+  },
+  handleFormDestroy: function (e) {
+    e.preventDefault();
+    this.model.destroy(this.model, {
+      success: function () {
+        console.log('destroyed!');
+      },
+      error: function () {
+        console.log('failed to destroyed');
+      }
+    });
   },
   handleFormSubmit: function (e) {
     e.preventDefault();

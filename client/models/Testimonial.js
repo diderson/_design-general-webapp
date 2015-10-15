@@ -3,6 +3,13 @@ var app = require('ampersand-app');
 
 module.exports = AmpersandModel.extend({
   urlRoot: app.config.rooturl,
+  ajaxConfig: function () {
+    return {
+      headers: {
+        'If-Match': this._rev
+      }
+    };
+  },
   idAttribute: '_id',
   props: {
     _id: {
